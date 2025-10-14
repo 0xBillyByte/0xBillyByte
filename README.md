@@ -5,7 +5,7 @@
 🌱 **I’m currently learning**  <br>**JavaScript**, **Python**, and diving deeper into **AI** and automation.  <br><br>
 💬 **Ask me about**  <br>Web development, small project setups, or how to get started with programming as an apprentice 👨‍💻  <br><br>
 ⚡ **Fun fact**  <br>
-I sometimes break my own systems — just to see if I can fix them faster the second time 😅  <br><br>
+I sometimes break my own systems - just to see if I can fix them faster the second time 😅  <br><br>
 📫 **How to reach me**  <br>
 Reach out here on GitHub or connect with me on any tech community platform 💬  
 

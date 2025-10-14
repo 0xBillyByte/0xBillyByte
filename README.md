@@ -1,5 +1,5 @@
 # 💫 About Me:
-### 👋 Hey there, I’m 0xBillyByte  
+## 👋 Hey there, I’m 0xBillyByte  
 ---
 🔭 **I’m currently working on**  <br>Building a few **web projects**, experimenting with **AI tools**, and maintaining a **test network** to sharpen my IT skills.  <br><br>
 🌱 **I’m currently learning**  <br>**JavaScript**, **Python**, and diving deeper into **AI** and automation.  <br><br>
@@ -9,7 +9,7 @@ I sometimes break my own systems — just to see if I can fix them faster the se
 📫 **How to reach me**  <br>
 Reach out here on GitHub or connect with me on any tech community platform 💬  
 
-🎯 **Goals for this year**  <br>
+## 🎯 Goals for this year
 ✨ Improve my coding skills  <br>
 🚀 Contribute to open-source projects <br>
 🤝 Join or start something awesome with other developers  <br><br>

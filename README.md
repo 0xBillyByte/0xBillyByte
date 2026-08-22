@@ -1,86 +1,62 @@
 ## Hallo, ich bin Billynary
 
-Lernender Informatiker aus der Schweiz. Mich interessiert vor allem die Stelle,
-an der Security, Infrastruktur und Automatisierung zusammenlaufen: Systeme
-bauen, sie danach selbst auseinandernehmen und daraus lernen, wie man sie beim
-nächsten Mal robuster baut.
+Lernender Informatiker aus der Schweiz. Mich interessieren zwei Dinge: eine
+Infrastruktur sicher aufbauen und sie danach selbst angreifen.
 
-Am liebsten arbeite ich an Dingen, die ich danach wirklich selbst benutze. Fast
-alles hier läuft bei mir zuhause im eigenen Labor produktiv.
+Der Rest ergibt sich daraus. Ich baue etwas, nehme es auseinander und baue es
+beim nächsten Mal robuster.
 
-## Woran ich gerade arbeite
+## Schwerpunkte
 
-**[Vulnerability-Scanner](https://github.com/Billynary/Vulnerability-Scanner)**
-Selbst gehostetes Schwachstellenmanagement, das Nessus, Nucleus und Aikido durch
-ein einziges Werkzeug ersetzt. Vier Scanner (nmap, Ansible-Paketinventar, Trivy
-für Abhängigkeiten und Images) schreiben in dieselbe Findings-Tabelle, Befunde
-werden über ihre Aliase zusammengeführt und nach CVSS, EPSS, CISA KEV und
-Asset-Gewicht priorisiert. Kern ist ein Scope-Guard, der dreifach durchsetzt, was
-überhaupt gescannt werden darf. Python, FastAPI, PostgreSQL, React.
+**Red Team.** Web-Exploitation, Angriffe auf Geschäftslogik, Privilege
+Escalation, Active Directory. Geübt wird im eigenen Labor und auf Plattformen wie
+Hack The Box, nicht auf fremden Systemen.
 
-**[OSINT](https://github.com/Billynary/OSINT)**
-Recherchewerkzeug mit fünf Modulen: Namenssuche über 16 offene Quellen,
-Username-Check, Domain- und Infrastrukturrecherche, defensive E-Mail-Analyse und
-EXIF-Auswertung. Ausschliesslich offizielle APIs und öffentliche Quellen, kein
-Scraping. Die Treffer kommen als Server-Sent Events herein, damit eine langsame
-Quelle nicht die ganze Suche aufhält. React und Express.
+**Sichere Infrastruktur.** Segmentierung, interne PKI, zentrale Authentisierung,
+Least Privilege und Hardening. Alles als Code, damit es nachvollziehbar und
+wiederherstellbar bleibt.
 
-**[cit](https://github.com/Billynary/cit)**
-Ein Git-Werkzeug fürs Terminal, das die Stärken von GitLens (Commit-Graph, Blame,
-Diffs) mit der GitHub-Anbindung (Pull Requests, Checks, Reviews) verbindet.
-Inklusive eigenem Lane-Algorithmus für den Graphen und einer Konfliktansicht mit
-Auflösung pro Hunk. TypeScript und Ink.
-
-**[Scraper](https://github.com/Billynary/Scraper)**
-Watcher für Wohnungen, Flüge, Hotels und Tickets. Erkennt Änderungen gegenüber
-dem letzten Lauf und meldet sie per Telegram. Offizielle APIs vor HTML-Scraping,
-robots.txt wird durchgesetzt statt nur protokolliert, und der gesamte
-Netzwerkverkehr läuft durch einen einzigen höflichen HTTP-Client, damit keine
-Quelle die Regeln umgehen kann. Python.
+## Projekte
 
 **[Monkstore](https://github.com/Billynary/Monkstore)**
-Ein absichtlich verwundbarer NFT-Marktplatz als eigenes Security-Labor. Der Kern
-ist bewusst sauber gebaut (argon2id, Zod-Validierung, Prisma), damit die
-eingebauten Lücken realistisch wirken. Neben den Lehrbuchklassikern stecken die
-interessanteren Fehler in der Geschäftslogik: Preismanipulation, eine Race
-Condition beim Kauf und ein Webhook ohne Signaturprüfung. Fastify und TypeScript.
+Absichtlich verwundbarer Marktplatz als eigenes Angriffslabor. Der Kern ist
+sauber gebaut, damit die Lücken realistisch sind. Die interessanteren stecken in
+der Geschäftslogik: Preismanipulation, eine Race Condition beim Kauf, ein Webhook
+ohne Signaturprüfung. Fastify, TypeScript.
+
+**[Vulnerability-Scanner](https://github.com/Billynary/Vulnerability-Scanner)**
+Eigenes Schwachstellenmanagement statt Nessus, Nucleus und Aikido. Vier Scanner
+schreiben in dieselbe Findings-Tabelle, priorisiert wird nach CVSS, EPSS und CISA
+KEV. Python, FastAPI, PostgreSQL, React.
+
+**[OSINT](https://github.com/Billynary/OSINT)**
+Fünf Module für die Aufklärungsphase: Namenssuche über 16 offene Quellen,
+Username-Check, Domain- und Infrastrukturrecherche, E-Mail-Analyse, EXIF.
+Ausschliesslich offizielle APIs, kein Scraping. React, Express.
+
+**[cit](https://github.com/Billynary/cit)**
+Git-Werkzeug fürs Terminal, das GitLens-Funktionen mit der GitHub-Anbindung
+verbindet. Eigener Lane-Algorithmus für den Commit-Graphen. TypeScript, Ink.
+
+**[Scraper](https://github.com/Billynary/Scraper)**
+Watcher für Wohnungen, Flüge und Tickets. Offizielle APIs vor HTML-Scraping,
+robots.txt wird durchgesetzt. Python.
 
 **[EatAI](https://github.com/Billynary/EatAI)**
-Lebensmittelverwaltung mit Ablaufwarnungen, Einkaufsliste und Rezeptvorschlägen
-aus den vorhandenen Zutaten. Bewusst ohne Frontend-Framework. Express und
-PostgreSQL.
+Lebensmittelverwaltung mit Ablaufwarnungen. Bewusst ohne Frontend-Framework.
 
-Dazu kommen ein paar Dinge, die nicht öffentlich liegen: die Infrastructure as
-Code für mein Homelab und eine selbst gehostete Plattform, in der ich Ziele,
-Noten, Finanzen und Gewohnheiten zusammenführe.
+Nicht öffentlich: die Infrastructure as Code für mein Homelab und eine selbst
+gehostete Plattform für Ziele, Noten und Finanzen.
 
-## Mein Homelab
+## Homelab
 
-Der eigentliche Lernort. Ein Proxmox-Host, rund 20 Systeme in vier VLANs,
-vollständig als Code beschrieben: OpenTofu provisioniert, Ansible konfiguriert,
-je Service eine eigene Datei.
+Angriffsfläche und Übungsziel zugleich. Ein Proxmox-Host, rund 20 Systeme in vier
+VLANs, vollständig als Code: OpenTofu provisioniert, Ansible konfiguriert.
 
-Was dort läuft und wobei ich am meisten gelernt habe:
-
-* Eine zweistufige interne PKI mit step-ca, die Traefik per ACME automatisch mit
-  Zertifikaten versorgt
-* Autoritatives DNS mit BIND9 und Split-DNS, die Zone wird aus dem Ansible-Inventar
-  generiert und kann deshalb nicht davon abweichen
-* Zitadel als zentraler OIDC-Provider für alle Dienste, die föderieren können
-* Ein selbst gehostetes Mesh-VPN mit Headscale statt eines fremden Koordinationsdienstes
-* Ein einzelner Kubernetes-Node mit k3s, bewusst als VM statt als Container im Container
-* Eine isolierte Datenbank pro Dienst statt einer zentralen Instanz, nachdem mir
-  klar wurde, wie gross der geteilte Schadensradius vorher war
-
-## Was mich interessiert
-
-* **Security**: defensive Arbeit, Schwachstellenmanagement, Hardening, dazu
-  Web-Exploitation im eigenen Labor
-* **Infrastruktur und Automatisierung**: Infrastructure as Code, Ansible,
-  Container, Kubernetes, Observability
-* **Netzwerke**: VLANs, Routing, Reverse Proxies, DNS und alles, was ich anfassen kann
-* **Sauberer Code**: lieber wenige Abhängigkeiten und eine Entscheidung, die
-  begründet im Repository steht, als ein Framework, das ich nicht durchschaue
+Zweistufige interne PKI mit step-ca, autoritatives DNS mit BIND9 und Split-DNS,
+Zitadel als zentraler OIDC-Provider, ein selbst gehostetes Mesh-VPN mit
+Headscale, ein k3s-Node und eine isolierte Datenbank je Dienst statt einer
+zentralen Instanz.
 
 ## Tech Stack
 
@@ -130,10 +106,6 @@ Was dort läuft und wobei ich am meisten gelernt habe:
 ![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)
 ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
 ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)
-
-## Kontakt
-
-Am einfachsten hier über GitHub, per Issue oder Discussion in einem der Repos.
 
 > Ich zerlege meine eigenen Systeme regelmässig, nur um zu sehen, ob ich sie beim
 > zweiten Mal schneller wieder zum Laufen bringe.
